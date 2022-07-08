@@ -18,9 +18,9 @@ struct GoeselGoster: View {
     }
     var body: some View {
         if let data = self.webService.indirilenGorsel{
-            return Image(uiImage: UIImage(data: data)!).resizable().aspectRatio(contentMode: .fill).frame(width: 80, height: 100, alignment: .center).clipShape(Rectangle()).cornerRadius(15)
+            return Image(uiImage: UIImage(data: data)!).resizable()
         }else{
-            return Image("joker").resizable().aspectRatio(contentMode: .fill).frame(width: 80, height: 100, alignment: .center).clipShape(Rectangle()).cornerRadius(15)
+            return Image("joker").resizable()
         }
     }
 }

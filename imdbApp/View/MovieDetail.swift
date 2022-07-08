@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct MovieDetail: View {
+    var gelenId : String
+    @ObservedObject var detailModelView = DetailModelView()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        VStack{
+            VStack(alignment: .trailing){
+                GoeselGoster(gelenUrl: detailModelView.filmDetail?.poster ?? "").aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: 400, alignment: .center).clipShape(Circle()).edgesIgnoringSafeArea(.all).padding(.leading, 160.0).padding(.top,-200).shadow(radius: 15)
+                
+            }
+            VStack(){
+                
+                VStack(alignment: .center){
+                    
+                    Text((detailModelView.filmDetail?.title! ?? "Loading.")).font(.title).fontWeight(.heavy).multilineTextAlignment(.center)
+                    Text(detailModelView.filmDetail?.imdbRating ?? "").font(.title3
+                    ).foregroundColor(.yellow)
+                    
 
-struct MovieDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieDetail()
-    }
+                }.padding(.all)
+                Text(detailModelView.filmDetail?.plot ?? "")
+                    .multilineTextAlignment(.center)
+                
+            }
+            .padding(.horizontal, 20.0)
+          Spacer()
+        }.onAppear(perform: {
+            self.detailModelView.detayGetir(idsi: self.gelenId)
+        
+    })
 }
+}
+ 

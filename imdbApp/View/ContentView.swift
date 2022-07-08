@@ -20,12 +20,12 @@ struct ContentView: View {
         NavigationView{
             VStack(alignment: .leading){
         TextField("Aranacak Film", text: $arananFilm) {
-                self.filmListViewModel.filmArama(aranacak: arananFilm)
+            self.filmListViewModel.filmArama(aranacak: arananFilm.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? arananFilm)
         }.padding(.leading, 30.0).frame(width: 200, height: 50, alignment: .leading).clipShape(Rectangle())
         List(filmListViewModel.filmler, id: \.imdbID){gelen in
-            NavigationLink(destination: MovieDetail()) {
+            NavigationLink(destination: MovieDetail(gelenId: gelen.imdbID!)) {
                 HStack{
-                    GoeselGoster(gelenUrl: gelen.poster!)
+                    GoeselGoster(gelenUrl: gelen.poster!).aspectRatio(contentMode: .fill).frame(width: 80, height: 100, alignment: .center).clipShape(Rectangle()).cornerRadius(15)
                     VStack(alignment: .leading){
                         Spacer()
                         Group{
