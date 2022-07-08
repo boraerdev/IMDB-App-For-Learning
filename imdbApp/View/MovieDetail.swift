@@ -20,16 +20,30 @@ struct MovieDetail: View {
             VStack(){
                 
                 VStack(alignment: .center){
-                    
+                    Text(detailModelView.filmDetail?.runtime ?? "").font(.footnote).foregroundColor(.gray).padding(.bottom,-5)
+                    HStack{
                     Text((detailModelView.filmDetail?.title! ?? "Loading.")).font(.title).fontWeight(.heavy).multilineTextAlignment(.center)
-                    Text(detailModelView.filmDetail?.imdbRating ?? "").font(.title3
-                    ).foregroundColor(.yellow)
+                        
+                        Text((detailModelView.filmDetail?.imdbRating ?? "")).font(.title2).multilineTextAlignment(.leading).padding(10.0).frame(width: 75, height: 30, alignment: .center).background(Color.yellow).cornerRadius(8)
+                }
+                    Text(detailModelView.filmDetail?.year ?? "").font(.title3
+                    ).foregroundColor(.blue)
                     
 
                 }.padding(.all)
+                
                 Text(detailModelView.filmDetail?.plot ?? "")
+                    .font(.body)
                     .multilineTextAlignment(.center)
                 
+                TitlesValues(titles: "Actors", value: detailModelView.filmDetail?.actors ?? "")
+                TitlesValues(titles: "Director", value: detailModelView.filmDetail?.director ?? "")
+                TitlesValues(titles: "Genre", value: detailModelView.filmDetail?.genre ?? "")
+                
+
+                    
+                
+                                
             }
             .padding(.horizontal, 20.0)
           Spacer()

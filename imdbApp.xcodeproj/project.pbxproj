@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2D22E72878DE4900DF8D2C /* TitlesValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2D22E62878DE4900DF8D2C /* TitlesValues.swift */; };
 		0A7ACCF82878A32F0014F02B /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7ACCF72878A32F0014F02B /* DetailModel.swift */; };
 		0A7ACCFA2878A9C70014F02B /* DetailModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7ACCF92878A9C70014F02B /* DetailModelView.swift */; };
 		0A7ACCFD2878C26C0014F02B /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7ACCFC2878C26C0014F02B /* MovieDetail.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2D22E62878DE4900DF8D2C /* TitlesValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesValues.swift; sourceTree = "<group>"; };
 		0A7ACCF72878A32F0014F02B /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		0A7ACCF92878A9C70014F02B /* DetailModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModelView.swift; sourceTree = "<group>"; };
 		0A7ACCFC2878C26C0014F02B /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				0AFDFB272878520A0080998D /* imdbAppApp.swift */,
 				0AFDFB292878520A0080998D /* ContentView.swift */,
 				0A7ACCFC2878C26C0014F02B /* MovieDetail.swift */,
+				0A2D22E62878DE4900DF8D2C /* TitlesValues.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				0A7ACCFD2878C26C0014F02B /* MovieDetail.swift in Sources */,
 				0AA8DA0628788B860079B241 /* GoeselGoster.swift in Sources */,
 				0AFDFB3A287852800080998D /* WebService.swift in Sources */,
+				0A2D22E72878DE4900DF8D2C /* TitlesValues.swift in Sources */,
 				0A7ACCFA2878A9C70014F02B /* DetailModelView.swift in Sources */,
 				0AFDFB2A2878520A0080998D /* ContentView.swift in Sources */,
 				0AFDFB282878520A0080998D /* imdbAppApp.swift in Sources */,
